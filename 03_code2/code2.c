@@ -30,14 +30,12 @@ int printTriangle(int size) {
 
   //your answer is starCount
 
-
-
 int main(void) {
   int numStars;
   printf("Here is a triangle with height 4\n");
   numStars=printTriangle(4);
   printf("That triangle had %d total stars\n",numStars);
-  printf("Here is a triangle with hieght 7\n");
+  printf("Here is a triangle with height 7\n");
   numStars=printTriangle(7);
   printf("That triangle had %d total stars\n",numStars);
 
