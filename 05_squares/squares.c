@@ -35,9 +35,9 @@ void squares(int size1, int x_offset, int y_offset, int size2)
      h=size1;
      else
        h=y_offset+size2;
-     for(int y=0;y<=h;y++)
+     for(int y=0;y<h;y++)
        {
-	 for(int x=0;x<=w;x++)
+	 for(int x=0;x<w;x++)
 	   {
 	     if(((x>=x_offset&&x<(x_offset+size2))&&(y==y_offset||y==(y_offset+size2-1)))||((y>=y_offset&&y<(y_offset+size2))&&(x==x_offset||x==(x_offset+size2-1))))
 	       printf("*");
