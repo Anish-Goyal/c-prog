@@ -8,7 +8,7 @@ struct _retire_info
 };
 typedef struct _retire_info retire_info;
 void retirement(int,double,retire_info,retire_info);
-int main()
+int main(void)
 {
   int startAge=327;
   double initial=(21345.00);
@@ -24,18 +24,19 @@ int main()
 }
   void retirement(int startAge,double initial,retire_info working,retire_info retired)
   {
-  for(startAge=327;startAge>startAge+working.months+retired.months;startAge++)
+    while(startAge<327+(working.months)+(retired.months))
     {
-      if(startAge<startAge+working.months)
+      if(startAge<327+(working.months))
 	{
     
 	  printf("Age %3d month %2d you have $%.2f\n",startAge/12,startAge%12,initial);
-	  initial=(initial*working.rate_of_return)+initial+working.contribution;
+	  initial=(initial*(working.rate_of_return))+initial+(working.contribution);
 	}
       else
 	{
 	  printf("Age %3d month %2d you have $%.2f\n",startAge/12,startAge%12,initial);
-	  initial=(initial*retired.rate_of_return)+initial+retired.contribution;
+	  initial=(initial*(retired.rate_of_return))+initial+(retired.contribution);
 	}
+      startAge++;
     }
 }
